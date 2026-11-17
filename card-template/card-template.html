@@ -1,0 +1,104 @@
+<!-- CSS art of a card --> 
+<!-- let = .csv (reference locally) --> 
+<!-- integrate with...javascript cms template, html template template --> 
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --frame-width: 25px;
+    --frame-height: 35px;
+    --multiplier: 15;
+    --corner-curve: 15px;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .frame {
+    position: relative;
+    width: calc(var(--frame-width) * var(--multiplier));
+    height: calc(var(--frame-height) * var(--multiplier));
+    border: 1px solid;
+    box-shadow: 10px 10px black;
+    border-radius: var(--corner-curve);
+    background-color: #f5f5f4;
+  }
+  
+  .placeholder-image {
+    box-sizing: border-box;
+    position: relative;
+    place-items: center;
+    top: calc(var(--frame-height) * var(--multiplier) * 0.185);
+    width: 315px;
+    left: calc((var(--frame-width) * var(--multiplier) - 315px)/2);
+    padding: 10px 10px 10px 10px;
+    height: 225px;
+    border: 1px dashed;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .class-number {
+    width: calc(var(--frame-width) * var(--multiplier));
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    font-size: 53px;
+    height: auto;
+    font-family: Helvetica;
+    font-weight: bold;
+  }
+  
+  .class-title {
+    width: 180px;
+    left: calc((var(--frame-width) * var(--multiplier) - 180px)/2);
+    top: calc((var(--frame-width) * var(--multiplier) - 120px)/2);
+    height: auto;
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    font-family: Helvetica;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid;
+  }
+  
+  .season-suit {
+    border: 1px solid;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 150px;
+  }
+    
+  .cluster-suit {
+    border: 1px solid;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 150px;
+  }
+  
+</style>
+
+<body>
+
+  <div class="frame">
+    <div class="placeholder-image"></div>
+    <div class="class-number">MADD #####</div>
+    <div class="class-title">This is the name of the course keep it centered change size if needed? Media query?? Why does it inch down like that? Top property??</div>
+    <div class="season-suit"></div>
+    <div class="cluster-suit"></div>
+  </div>
+
+</body>
